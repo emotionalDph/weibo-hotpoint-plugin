@@ -2,22 +2,19 @@ openapi: 3.0.1
 info:
   title: Weibo Hotpoint
   version: v1
-  description: Get Weibo hot searches
-
+  description: Using API for Weibo hotpoint
 servers:
   - url: https://v3.alapi.cn
-
 paths:
   /api/new/wbtop:
     get:
-      summary: Get Weibo hot search list
+      summary: Get Weibo Hot Topics
       parameters:
-        - in: query
-          name: token
+        - name: token
+          in: query
+          required: true
           schema:
             type: string
-          required: true
-          description: API token
       responses:
         '200':
           description: Success
